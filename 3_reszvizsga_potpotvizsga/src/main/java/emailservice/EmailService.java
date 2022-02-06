@@ -44,7 +44,7 @@ public class EmailService {
         for (User u : users) {
             if (u.getEmailAddress().equals(from)) {
                 for (User usr : users) {
-                    if (usr.getEmailAddress().equals(to)) {
+                    if (usr.getEmailAddress().equals(to)) {;
                         u.sendEmail(subject, content, usr);
                     }
                 }

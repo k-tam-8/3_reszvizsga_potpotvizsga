@@ -53,5 +53,11 @@ public class User {
         this.hasSpamFilter = !hasSpamFilter;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "emailAddress='" + emailAddress + '\'' +
 
+                '}';
+    }
 }
