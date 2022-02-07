@@ -11,7 +11,8 @@ public class EmailService {
     }
 
     public void registerUser(String emailAddress) {
-        if (emailAddress.contains("@") && isValidEmailAddress(emailAddress)) {
+        String emailLowerCase = emailAddress.toLowerCase();
+        if (emailAddress.contains("@") && isValidEmailAddress(emailAddress) && emailLowerCase.equals(emailAddress)) {
             isNotTakenEmailAddress(emailAddress);
             users.add(new User(emailAddress.toLowerCase()));
         } else throw new IllegalArgumentException("Email address is not valid: " + emailAddress);
